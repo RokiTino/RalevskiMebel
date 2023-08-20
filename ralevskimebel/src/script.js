@@ -53,12 +53,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const colorSwatches = document.querySelectorAll('.color-swatch');
-const colorPreview = document.getElementById('color-preview'); // Where you want to display the selected color
-
-colorSwatches.forEach(swatch => {
-    swatch.addEventListener('click', () => {
-        const selectedColor = swatch.style.backgroundColor;
-        colorPreview.style.backgroundColor = selectedColor;
+const colorGroupRows = document.querySelectorAll('.color-group');
+const toggleButton = document.getElementsByClassName('.toggle-button')
+// Add click event listeners to each color group header
+colorGroupRows.forEach(groupRow => {
+    toggleButton.addEventListener('click', () => {
+        console.log('click');
+        // Toggle visibility of rows within this color group
+        const colorRows = groupRow.nextElementSibling.querySelectorAll('tr');
+        colorRows.forEach(row => {
+            row.classList.toggle('hidden');
+        });
     });
 });

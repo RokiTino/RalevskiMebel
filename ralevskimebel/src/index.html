@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ralevski Mebel</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="assets" href="./assets/images/">
-    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="assets" href="../assets/images/">
+    <link rel="icon" href="../assets/Logo.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 
 <!-- Navbar -->
-<div class="navbar">
-    <p href="/"><img src="./assets/Logo.png"/> </p>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="Colors.html">Colors</a>
-    <a href="#contact">Contact</a>
-</div>
-
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="../assets/Logo.png"/></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Our Work</a></li>
+        <li><a href="Colors.html">Colors</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 <!-- Hero Image -->
 <div class="hero-image">
-    <img src="./assets/Banner.png" />
+    <img src="../assets/Banner.png" />
 </div>
 
-<section id="gallery">
-    <h2>Gallery</h2>
+<section id="gallery" class="content-section">
     <button id="prevBtn" class="arrow left-arrow">&#9664;</button>
 
     <div class="carousel-container">
         <!-- Images -->
-        <img class="carousel-image" src="./assets/image1.png" alt="Image 1">
-        <img class="carousel-image" src="./assets/image2.png" alt="Image 2">
-        <img class="carousel-image" src="./assets/image3.png" alt="Image 3">
-        <img class="carousel-image" src="./assets/image4.png" alt="Image 4">
+        <img class="carousel-image" src="../assets/image1.png" alt="Image 1">
+        <img class="carousel-image" src="../assets/image2.png" alt="Image 2">
+        <img class="carousel-image" src="../assets/image3.png" alt="Image 3">
+        <img class="carousel-image" src="../assets/image4.png" alt="Image 4">
     </div>
 
     <!-- Next and Previous Buttons -->
@@ -47,11 +49,33 @@
 
 <!-- Content Section -->
 <section id="about" class="content-section">
-<div style="padding: 20px;">
+<div style="padding: 20px; margin-top: 5%;">
     <h2>About Us</h2>
     <p>This is the about us section of your website.</p>
 </div>
 </section>
+
+<section id="contact" class="content-section">
+    <div style="padding: 20px; margin-top: 5%;">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form
+            action="https://formspree.io/f/xvojazrd"
+            method="POST"
+            >
+            <label>
+                <input type="email" name="email" placeholder="Email">
+            </label>
+            <br>
+            <label>
+                <textarea name="message" placeholder="Enter your message here!"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    </section>
 
 <!-- Footer -->
 <footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
