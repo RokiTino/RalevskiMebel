@@ -6,7 +6,9 @@
     <title>Ralevski Mebel</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="assets" href="./assets/images/">
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -15,7 +17,8 @@
     <p href="/"><img src="./assets/Logo.png"/> </p>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#galery">Galery</a>
+    <a href="#gallery">Gallery</a>
+    <a href="Colors.html">Colors</a>
     <a href="#contact">Contact</a>
 </div>
 
@@ -24,12 +27,31 @@
     <img src="./assets/Banner.png" />
 </div>
 
+<section id="gallery">
+    <h2>Gallery</h2>
+    <button id="prevBtn" class="arrow left-arrow">&#9664;</button>
+
+    <div class="carousel-container">
+        <!-- Images -->
+        <img class="carousel-image" src="./assets/image1.png" alt="Image 1">
+        <img class="carousel-image" src="./assets/image2.png" alt="Image 2">
+        <img class="carousel-image" src="./assets/image3.png" alt="Image 3">
+        <img class="carousel-image" src="./assets/image4.png" alt="Image 4">
+    </div>
+
+    <!-- Next and Previous Buttons -->
+    <button id="nextBtn" class="arrow right-arrow">&#9654;</button>
+
+</section>
+
 
 <!-- Content Section -->
+<section id="about" class="content-section">
 <div style="padding: 20px;">
     <h2>About Us</h2>
     <p>This is the about us section of your website.</p>
 </div>
+</section>
 
 <!-- Footer -->
 <footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
